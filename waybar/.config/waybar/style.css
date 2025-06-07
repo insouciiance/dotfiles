@@ -18,7 +18,7 @@
 @define-color error rgb(255, 107, 107);
 
 window#waybar {
-    font-family: 'CommitMono Nerd Font';
+    font-family: 'RobotoMono Nerd Font';
     background: alpha(@bg-primary, 0.25);
     border-bottom-width: 1px;
     border-bottom-color: @bg-secondary;
