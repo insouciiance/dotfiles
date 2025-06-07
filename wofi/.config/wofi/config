@@ -1,0 +1,4 @@
+allow_images=true
+columns=2
+sort_order=alphabetical
+prompt=~Search~

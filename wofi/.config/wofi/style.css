@@ -1,0 +1,134 @@
+@define-color bg-primary rgb(0, 0, 0);
+@define-color bg-secondary rgb(71, 71, 71);
+@define-color bg-tertiary rgb(95, 95, 95);
+
+@define-color text-primary rgb(215, 215, 215);
+
+@define-color vivid-1 rgb(255, 0, 221);
+@define-color vivid-2 rgb(0, 209, 255);
+@define-color vivid-3 rgb(255, 213, 0);
+
+@define-color accent-1 rgb(249, 194, 46);
+@define-color accent-2 rgb(255, 115, 161);
+@define-color accent-3 rgb(0, 188, 212);
+@define-color accent-4 rgb(161, 143, 255);
+
+@define-color success rgb(129, 242, 156);
+@define-color warning rgb(247, 178, 103);
+@define-color error rgb(255, 107, 107);
+
+* {
+    font-family: 'CommitMono Nerd Font', monospace;
+    font-size: 16px;
+    transition-duration: .1s;
+    transition-property: 'background', 'color', 'border-color';
+}
+
+window {
+    background: alpha(@bg-secondary, 0.9);
+    border-radius: 8px;
+}
+
+#inner-box {}
+
+#outer-box {
+    margin: 2px;
+    padding: 4px;
+    border-radius: 8px;
+    border: 2px solid alpha(@accent-4, 0.9);
+}
+
+#input {
+    margin: 8px;
+    border: 2px solid @accent-3;
+    background: alpha(@bg-secondary, 0.9);
+    color: @text-primary;
+    font-size: 16px;
+    padding-left: 0;
+}
+
+#input:focus {
+    outline: none;
+    border: 2px solid @vivid-3;
+}
+
+#input:first-child> :nth-child(1) {
+    min-height: 40px;
+    min-width: 40px;
+    margin: 4px 8px 4px 4px;
+    background-image: url("/home/insouciiance/.config/wofi/Assets/Search.jpg");
+    background-size: contain;
+    color: transparent;
+    border-radius: 32px;
+}
+
+#input:first-child > :nth-child(4) {
+    color: @accent-1;
+}
+
+#input:first-child > :nth-child(4):hover {
+    color: @vivid-2;
+}
+
+#text {
+    padding: 5px;
+    color: @text-primary;
+}
+
+#entry {
+    border-radius: 8px;
+}
+
+#entry:selected {
+    background: alpha(@bg-tertiary, 0.9)
+}
+
+#text:selected {
+    color: @vivid-3;
+}
+
+#scroll {
+    border-radius: 8px;
+}
+
+#img {
+    margin-right: 4px;
+}
+
+expander {
+    color: @text-primary;
+}
+
+expander> :nth-child(1) > :nth-child(1) {
+    margin-right: 8px;
+}
+
+expander> :nth-child(1):hover > :nth-child(1) {
+    color: @vivid-3;
+}
+
+#entry:selected expander {
+    color: @vivid-3;
+}
+
+expander > list > #entry {
+    border-radius: 8px;
+    margin-left: 8px;
+}
+
+expander > list > #entry:selected {
+    background: alpha(@bg-tertiary, 0.9);
+}
+
+expander > list > #entry #img {}
+
+expander>list>#entry #text {}
+
+expander>list>#entry:selected #text {
+    color: @vivid-3;
+}
+
+#expander-box {
+    background: alpha(@bg-secondary, 0.9);
+    padding-left: 32px;
+}

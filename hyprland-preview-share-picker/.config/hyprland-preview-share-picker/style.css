@@ -1,0 +1,127 @@
+@define-color bg-primary rgb(0, 0, 0);
+@define-color bg-secondary rgb(71, 71, 71);
+@define-color bg-tertiary rgb(95, 95, 95);
+
+@define-color text-primary rgb(215, 215, 215);
+
+@define-color vivid-1 rgb(255, 0, 221);
+@define-color vivid-2 rgb(0, 209, 255);
+@define-color vivid-3 rgb(255, 213, 0);
+
+@define-color accent-1 rgb(249, 194, 46);
+@define-color accent-2 rgb(255, 115, 161);
+@define-color accent-3 rgb(0, 188, 212);
+@define-color accent-4 rgb(161, 143, 255);
+
+@define-color success rgb(129, 242, 156);
+@define-color warning rgb(247, 178, 103);
+@define-color error rgb(255, 107, 107);
+
+* {
+    all: unset;
+    font-family: 'CommitMono Nerd Font';
+    font-weight: 900;
+}
+
+.window {
+    border-radius: 8px;
+    background-color: alpha(@bg-secondary, 0.9);
+    border: solid 2px alpha(@accent-4, 0.9);
+    padding: 8px;
+}
+
+tabs {
+    padding: 8px 16px;
+}
+
+tabs > tab {
+    margin-right: 1rem;
+    background-color: alpha(@bg-tertiary, 1);
+    padding: 8px 16px;
+    margin: 0;
+    font-size: 16px;
+}
+
+tabs > tab:nth-child(1) {
+    border-radius: 8px 0 0 8px;
+}
+
+tabs > tab:nth-child(3) {
+    border-radius: 0 8px 8px 0;
+}
+
+.tab-label {
+    color: @text-primary;
+    transition: all 0.1s ease;
+}
+
+tabs>tab:checked > .tab-label,
+tabs>tab:active > .tab-label {
+    color: @vivid-3;
+}
+
+tabs>tab:focus > .tab-label {
+    color: @vivid-3;
+}
+
+tabs > tab:hover > .tab-label {
+    color: @vivid-2;
+}
+
+.page {
+    padding: 8px;
+}
+
+.image-label {
+    font-size: 14px;
+    padding: 4px;
+    color: @text-primary;
+}
+
+flowboxchild > .card,
+button > .card {
+    transition: all 0.1s ease;
+    border: solid 2px transparent;
+    border-radius: 8px;
+    background-color: alpha(@bg-primary, 0.9);
+    padding: 8px;
+}
+
+flowboxchild:active>.card,
+flowboxchild:selected>.card,
+button:active>.card,
+button:selected>.card,
+button:focus>.card {
+    border: solid 2px alpha(@vivid-3, 0.9);
+}
+
+.image {
+    border-radius: 8px;
+}
+
+.region-button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: alpha(@bg-primary, 0.9);
+    color: @text-primary;
+    transition: all 0.1s ease;
+}
+
+.region-button:not(:disabled):hover,
+.region-button:not(:disabled):focus {
+}
+
+.region-button:disabled {
+    background-color: $bg-tertiary;
+    color: @bg-primary;
+}
+
+.restore-button {
+    color: @text-primary;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.restore-button:checked {
+    color: @vivid-3;
+}
