@@ -82,7 +82,7 @@
         "format": " {usage}%"
     },
     "memory": {
-        "format": " {percentage}%"
+        "format": " {percentage}%"
     },
     "battery": {
         "format": "{icon} {capacity}%",
