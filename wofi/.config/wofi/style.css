@@ -1,21 +1,14 @@
-@define-color bg-primary rgb(0, 0, 0);
-@define-color bg-secondary rgb(71, 71, 71);
-@define-color bg-tertiary rgb(95, 95, 95);
+@define-color bg-primary rgb(26, 27, 38);
+@define-color bg-secondary rgb(31, 35, 53);
+@define-color text-primary rgb(192, 202, 245);
 
-@define-color text-primary rgb(215, 215, 215);
+@define-color accent-1 rgb(122, 162, 247);
+@define-color accent-2 rgb(247, 119, 170);
+@define-color accent-3 rgb(162, 135, 244);
 
-@define-color vivid-1 rgb(255, 0, 221);
-@define-color vivid-2 rgb(0, 209, 255);
-@define-color vivid-3 rgb(255, 213, 0);
-
-@define-color accent-1 rgb(249, 194, 46);
-@define-color accent-2 rgb(255, 115, 161);
-@define-color accent-3 rgb(0, 188, 212);
-@define-color accent-4 rgb(161, 143, 255);
-
-@define-color success rgb(129, 242, 156);
-@define-color warning rgb(247, 178, 103);
-@define-color error rgb(255, 107, 107);
+@define-color success rgb(158, 206, 106);
+@define-color warning rgb(224, 175, 104);
+@define-color error rgb(219, 75, 75);
 
 * {
     font-family: 'CommitMono Nerd Font', monospace;
@@ -35,12 +28,12 @@ window {
     margin: 2px;
     padding: 4px;
     border-radius: 8px;
-    border: 2px solid alpha(@accent-4, 0.9);
+    border: 2px solid alpha(@accent-3, 0.9);
 }
 
 #input {
     margin: 8px;
-    border: 2px solid @accent-3;
+    border: 2px solid @accent-2;
     background: alpha(@bg-secondary, 0.9);
     color: @text-primary;
     font-size: 16px;
@@ -49,7 +42,7 @@ window {
 
 #input:focus {
     outline: none;
-    border: 2px solid @vivid-3;
+    border: 2px solid @accent-3;
 }
 
 #input:first-child> :nth-child(1) {
@@ -67,7 +60,7 @@ window {
 }
 
 #input:first-child > :nth-child(4):hover {
-    color: @vivid-2;
+    color: @accent-2;
 }
 
 #text {
@@ -84,7 +77,7 @@ window {
 }
 
 #text:selected {
-    color: @vivid-3;
+    color: @accent-3;
 }
 
 #scroll {
@@ -104,11 +97,11 @@ expander> :nth-child(1) > :nth-child(1) {
 }
 
 expander> :nth-child(1):hover > :nth-child(1) {
-    color: @vivid-3;
+    color: @accent-3;
 }
 
 #entry:selected expander {
-    color: @vivid-3;
+    color: @accent-3;
 }
 
 expander > list > #entry {
@@ -125,7 +118,7 @@ expander > list > #entry #img {}
 expander>list>#entry #text {}
 
 expander>list>#entry:selected #text {
-    color: @vivid-3;
+    color: @accent-3;
 }
 
 #expander-box {

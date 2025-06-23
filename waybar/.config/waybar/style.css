@@ -1,21 +1,14 @@
-@define-color bg-primary rgb(0, 0, 0);
-@define-color bg-secondary rgb(71, 71, 71);
-@define-color bg-tertiary rgb(95, 95, 95);
+@define-color bg-primary rgb(26, 27, 38);
+@define-color bg-secondary rgb(31, 35, 53);
+@define-color text-primary rgb(192, 202, 245);
 
-@define-color text-primary rgb(215, 215, 215);
+@define-color accent-1 rgb(122, 162, 247);
+@define-color accent-2 rgb(247, 119, 170);
+@define-color accent-3 rgb(162, 135, 244);
 
-@define-color vivid-1 rgb(255, 0, 221);
-@define-color vivid-2 rgb(0, 209, 255);
-@define-color vivid-3 rgb(255, 213, 0);
-
-@define-color accent-1 rgb(249, 194, 46);
-@define-color accent-2 rgb(255, 115, 161);
-@define-color accent-3 rgb(0, 188, 212);
-@define-color accent-4 rgb(161, 143, 255);
-
-@define-color success rgb(129, 242, 156);
-@define-color warning rgb(247, 178, 103);
-@define-color error rgb(255, 107, 107);
+@define-color success rgb(158, 206, 106);
+@define-color warning rgb(224, 175, 104);
+@define-color error rgb(219, 75, 75);
 
 window#waybar {
     font-family: 'RobotoMono Nerd Font';
@@ -61,7 +54,7 @@ box#workspaces button {
     font-weight: 600;
     min-width: 8px;
     min-height: 8px;
-    background: @bg-tertiary;
+    background: @bg-secondary;
     border-radius: 4px;
     margin: 2px;
     padding: 4px 8px;
@@ -69,7 +62,7 @@ box#workspaces button {
 
 box#workspaces button.active {
     color: @bg-secondary;
-    background: @vivid-3;
+    background: @accent-3;
 }
 
 box#workspaces button.urgent {
@@ -97,7 +90,7 @@ box#workspaces button:hover {
 }
 
 #temperature {
-    color: @accent-4;
+    color: @accent-3;
     background: @bg-secondary;
     margin: 8px 0 8px 2px;
     padding: 0 8px;
@@ -109,14 +102,14 @@ box#workspaces button:hover {
 }
 
 #cpu {
-    color: @accent-4;
+    color: @accent-3;
     background: @bg-secondary;
     margin: 8px 0 8px 0;
     padding: 0 8px;
 }
 
 #memory {
-    color: @accent-4;
+    color: @accent-3;
     background: @bg-secondary;
     margin: 8px 2px 8px 0;
     padding: 0 8px;
@@ -160,7 +153,7 @@ box#workspaces button:hover {
 }
 
 #bluetooth {
-    color: @accent-3;
+    color: @accent-2;
     background: @bg-secondary;
     margin: 8px 0 8px 2px;
     padding: 0 8px;
@@ -168,7 +161,7 @@ box#workspaces button:hover {
 }
 
 #network {
-    color: @accent-3;
+    color: @accent-2;
     background: @bg-secondary;
     margin: 8px 2px 8px 0;
     padding: 0 8px;
