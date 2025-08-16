@@ -73,11 +73,12 @@ window {
 }
 
 #entry:selected {
-    background: alpha(@bg-tertiary, 0.9)
+    background: @bg-tertiary;
 }
 
 #text:selected {
     color: @accent-3;
+    background: @bg-tertiary;
 }
 
 #scroll {
@@ -86,6 +87,7 @@ window {
 
 #img {
     margin-right: 4px;
+    background: @bg-tertiary;
 }
 
 expander {
