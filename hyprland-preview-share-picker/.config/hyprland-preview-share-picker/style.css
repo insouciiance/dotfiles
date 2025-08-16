@@ -19,7 +19,7 @@
 
 * {
     all: unset;
-    font-family: 'CommitMono Nerd Font';
+    font-family: 'CommitMono Nerd Font', 'monospace';
     font-weight: 900;
 }
 
