@@ -1,14 +1,14 @@
-@define-color bg-primary rgb(26, 27, 38);
-@define-color bg-secondary rgb(31, 35, 53);
-@define-color text-primary rgb(192, 202, 245);
+@define-color bg-primary #1A1B26;
+@define-color bg-secondary #1F2335;
+@define-color text-primary #C8CBF0;
 
-@define-color accent-1 rgb(122, 162, 247);
-@define-color accent-2 rgb(247, 119, 170);
-@define-color accent-3 rgb(162, 135, 244);
+@define-color accent-1 #7AA2F7;
+@define-color accent-2 #B25EB2;
+@define-color accent-3 #AC7DED;
 
-@define-color success rgb(158, 206, 106);
-@define-color warning rgb(224, 175, 104);
-@define-color error rgb(219, 75, 75);
+@define-color success #1BD064;
+@define-color warning #EC8750;
+@define-color error #F20163;
 
 window#waybar {
     font-family: 'CommitMono Nerd Font', 'monospace';
@@ -87,6 +87,10 @@ box#workspaces button:hover {
 
 #window {
     color: @text-primary;
+    background-color: alpha(@bg-primary, 0.75);
+    border-radius: 8px;
+    margin: 8px 0;
+    padding: 0 8px;
 }
 
 #temperature {

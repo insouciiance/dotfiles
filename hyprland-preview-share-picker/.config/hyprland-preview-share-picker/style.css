@@ -1,21 +1,14 @@
-@define-color bg-primary rgb(0, 0, 0);
-@define-color bg-secondary rgb(71, 71, 71);
-@define-color bg-tertiary rgb(95, 95, 95);
+@define-color bg-primary #1A1B26;
+@define-color bg-secondary #1F2335;
+@define-color text-primary #C8CBF0;
 
-@define-color text-primary rgb(215, 215, 215);
+@define-color accent-1 #7AA2F7;
+@define-color accent-2 #B25EB2;
+@define-color accent-3 #AC7DED;
 
-@define-color vivid-1 rgb(255, 0, 221);
-@define-color vivid-2 rgb(0, 209, 255);
-@define-color vivid-3 rgb(255, 213, 0);
-
-@define-color accent-1 rgb(249, 194, 46);
-@define-color accent-2 rgb(255, 115, 161);
-@define-color accent-3 rgb(0, 188, 212);
-@define-color accent-4 rgb(161, 143, 255);
-
-@define-color success rgb(129, 242, 156);
-@define-color warning rgb(247, 178, 103);
-@define-color error rgb(255, 107, 107);
+@define-color success #1BD064;
+@define-color warning #EC8750;
+@define-color error #F20163;
 
 * {
     all: unset;
@@ -25,8 +18,8 @@
 
 .window {
     border-radius: 8px;
-    background-color: alpha(@bg-secondary, 0.9);
-    border: solid 2px alpha(@accent-4, 0.9);
+    background-color: alpha(@bg-primary, 0.9);
+    border: solid 2px alpha(@bg-secondary, 0.9);
     padding: 8px;
 }
 
@@ -36,7 +29,7 @@ tabs {
 
 tabs > tab {
     margin-right: 1rem;
-    background-color: alpha(@bg-tertiary, 1);
+    background-color: alpha(@bg-primary, 0.9);
     padding: 8px 16px;
     margin: 0;
     font-size: 16px;
@@ -52,24 +45,25 @@ tabs > tab:nth-child(3) {
 
 .tab-label {
     color: @text-primary;
-    transition: all 0.1s ease;
+    transition: all 0.1s;
 }
 
 tabs>tab:checked > .tab-label,
 tabs>tab:active > .tab-label {
-    color: @vivid-3;
+    color: @accent-3;
 }
 
 tabs>tab:focus > .tab-label {
-    color: @vivid-3;
+    color: @accent-3;
 }
 
 tabs > tab:hover > .tab-label {
-    color: @vivid-2;
+    color: @accent-2;
 }
 
 .page {
     padding: 8px;
+    background-color: alpha(@bg-primary, 0.9);
 }
 
 .image-label {
@@ -80,10 +74,10 @@ tabs > tab:hover > .tab-label {
 
 flowboxchild > .card,
 button > .card {
-    transition: all 0.1s ease;
+    transition: all 0.1s;
     border: solid 2px transparent;
     border-radius: 8px;
-    background-color: alpha(@bg-primary, 0.9);
+    background-color: alpha(@bg-secondary, 0.9);
     padding: 8px;
 }
 
@@ -92,7 +86,7 @@ flowboxchild:selected>.card,
 button:active>.card,
 button:selected>.card,
 button:focus>.card {
-    border: solid 2px alpha(@vivid-3, 0.9);
+    border: solid 2px alpha(@accent-1, 0.9);
 }
 
 .image {
@@ -102,9 +96,9 @@ button:focus>.card {
 .region-button {
     padding: 8px 16px;
     border-radius: 8px;
-    background-color: alpha(@bg-primary, 0.9);
+    background-color: alpha(@bg-secondary, 0.9);
     color: @text-primary;
-    transition: all 0.1s ease;
+    transition: all 0.1s;
 }
 
 .region-button:not(:disabled):hover,
@@ -112,7 +106,7 @@ button:focus>.card {
 }
 
 .region-button:disabled {
-    background-color: $bg-tertiary;
+    background-color: $text-primary;
     color: @bg-primary;
 }
 
@@ -123,5 +117,5 @@ button:focus>.card {
 }
 
 .restore-button:checked {
-    color: @vivid-3;
+    color: @accent-3;
 }
