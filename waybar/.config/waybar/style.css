@@ -2,13 +2,12 @@
 @define-color bg-secondary #1F2335;
 @define-color text-primary #C8CBF0;
 
-@define-color accent-1 #7AA2F7;
-@define-color accent-2 #B25EB2;
-@define-color accent-3 #AC7DED;
-
-@define-color success #1BD064;
-@define-color warning #EC8750;
-@define-color error #F20163;
+@define-color blue #7AA2F7;
+@define-color pink #B25EB2;
+@define-color violet #AC7DED;
+@define-color green #33A78A;
+@define-color orange #EC8750;
+@define-color magenta #F20163;
 
 window#waybar {
     font-family: 'CommitMono Nerd Font', 'monospace';
@@ -62,11 +61,11 @@ box#workspaces button {
 
 box#workspaces button.active {
     color: @bg-secondary;
-    background: @accent-3;
+    background: @violet;
 }
 
 box#workspaces button.urgent {
-    background: @accent-2;
+    background: @pink;
 }
 
 box#workspaces button:hover {
@@ -94,7 +93,7 @@ box#workspaces button:hover {
 }
 
 #temperature {
-    color: @accent-3;
+    color: @violet;
     background: @bg-secondary;
     margin: 8px 0 8px 2px;
     padding: 0 8px;
@@ -102,18 +101,18 @@ box#workspaces button:hover {
 }
 
 #temperature.critical {
-    color: @error;
+    color: @magenta;
 }
 
 #cpu {
-    color: @accent-3;
+    color: @violet;
     background: @bg-secondary;
     margin: 8px 0 8px 0;
     padding: 0 8px;
 }
 
 #memory {
-    color: @accent-3;
+    color: @violet;
     background: @bg-secondary;
     margin: 8px 2px 8px 0;
     padding: 0 8px;
@@ -121,7 +120,7 @@ box#workspaces button:hover {
 }
 
 #battery {
-    color: @success;
+    color: @green;
     background: @bg-secondary;
     margin: 8px 2px 8px 2px;
     padding: 0 8px;
@@ -129,15 +128,15 @@ box#workspaces button:hover {
 }
 
 #battery.warning {
-    color: @warning;
+    color: @orange;
 }
 
 #battery.critical {
-    color: @error;
+    color: @magenta;
 }
 
 #backlight {
-    color: @accent-1;
+    color: @blue;
     background: @bg-secondary;
     margin: 8px 0 8px 2px;
     padding: 0 8px;
@@ -145,7 +144,7 @@ box#workspaces button:hover {
 }
 
 #wireplumber {
-    color: @accent-1;
+    color: @blue;
     background: @bg-secondary;
     margin: 8px 2px 8px 0;
     padding: 0 8px;
@@ -157,7 +156,7 @@ box#workspaces button:hover {
 }
 
 #bluetooth {
-    color: @accent-2;
+    color: @pink;
     background: @bg-secondary;
     margin: 8px 0 8px 2px;
     padding: 0 8px;
@@ -165,7 +164,7 @@ box#workspaces button:hover {
 }
 
 #network {
-    color: @accent-2;
+    color: @pink;
     background: @bg-secondary;
     margin: 8px 2px 8px 0;
     padding: 0 8px;
@@ -173,7 +172,7 @@ box#workspaces button:hover {
 }
 
 #custom-power {
-    color: @accent-1;
+    color: @blue;
     background: @bg-secondary;
     margin: 8px 2px 8px 2px;
     padding: 0 8px 0 6px;

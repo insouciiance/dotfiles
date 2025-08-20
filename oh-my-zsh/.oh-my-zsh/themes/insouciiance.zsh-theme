@@ -1,6 +1,15 @@
-PROMPT='[%F{39}%n%f %F{178}%~%f] %F{2}$%f '
+autoload -Uz vcs_info
+autoload -Uz add-zsh-hook
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg_bold[blue]%}("
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg_bold[blue]%})"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✔"
+# Define how git info should look
+# Notice the leading space – only appears if vcs_info prints something
+zstyle ':vcs_info:git:*' formats ' '$'\ue0a0 ''%b'
+zstyle ':vcs_info:git:*' actionformats ' '$'\ue0a0 ''%b|%a'
+
+# Update vcs_info before each prompt
+precmd() { vcs_info }
+
+# Enable prompt substitution
+setopt prompt_subst
+
+PROMPT='%F{#7AA2F7}%n%f%F{#C8CBF0}@%f%F{#7AA2F7}%m%f %F{#EC8750}%~%f%F{#33A78A}${vcs_info_msg_0_}%f %F{#C8CBF0}$%f '
