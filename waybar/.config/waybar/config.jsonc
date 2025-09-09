@@ -16,6 +16,7 @@
         "hyprland/window"
     ],
     "modules-right": [
+        "custom/vpn",
         "temperature",
         "cpu",
         "memory",
@@ -27,7 +28,7 @@
         "custom/power"
     ],
     "clock#date": {
-        "interval": 1,
+        "interval": 60,
         "format": " {:%d.%m}"
     },
     "clock#time": {
@@ -66,6 +67,13 @@
             "(.*) — Mozilla Firefox": "$1",
             "(.*) - Code - OSS": "$1"
         }
+    },
+    "custom/vpn": {
+        "exec": "source ./tailscale-status.sh",
+        "format": " {text}",
+        "return-type": "json",
+        "interval": 10,
+        "on-click": "source ./tailscale-toggle.sh"
     },
     "temperature": {
         "format": "{icon} {temperatureC}°C",
