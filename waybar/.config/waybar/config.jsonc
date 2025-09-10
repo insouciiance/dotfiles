@@ -69,11 +69,11 @@
         }
     },
     "custom/vpn": {
-        "exec": "source ./tailscale-status.sh",
+        "exec": "source ~/.config/waybar/tailscale-status.sh",
         "format": " {text}",
         "return-type": "json",
         "interval": 10,
-        "on-click": "source ./tailscale-toggle.sh"
+        "on-click": "source ~/.config/waybar/tailscale-toggle.sh"
     },
     "temperature": {
         "format": "{icon} {temperatureC}°C",
