@@ -43,3 +43,4 @@
 # resize-overlay-duration = 4s 200ms
 
 background-opacity=0.75
+keybind = shift+enter=text:\x1b\r
